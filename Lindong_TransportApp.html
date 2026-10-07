@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Explore Ride - Transportation App</title>
+</head>
+
+<body id="top">
+
+    <!-- HEADER -->
+    <header>
+        <h1> Explore Ride</h1>
+
+        <p><em>Your efficient and reliable transportation partner.</em></p>
+
+        <nav>
+            <a href="#book">Book a Ride</a> |
+            <a href="#fleet">Our Vehicles</a> |
+            <a href="#media">Media</a> |
+            <a href="#schedule">Schedule</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <hr>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- BOOKING FORM -->
+        <section id="book">
+            <h2>Book a Ride</h2>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Trip Details</legend>
+
+                    <p>
+                        <label for="fullname">Full Name:</label>
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="09XX-XXX-XXXX"
+                            required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com">
+                    </p>
+
+                    <p>
+                        <label for="pickup">Pick-up Location:</label>
+                        <input
+                            type="text"
+                            id="pickup"
+                            name="pickup"
+                            list="places"
+                            placeholder="Choose a location">
+
+                        <datalist id="places">
+                            <option value="Central Terminal">
+                            <option value="City Hall">
+                            <option value="Airport">
+                            <option value="University Campus">
+                            <option value="Public Market">
+                            <option value="Park">
+                            <option value="Museum">
+                            <option value="Hotel">
+                            <option value="Restaurant">
+                            <option value="Mall">
+                        </datalist>
+                    </p>
+
+                    <p>
+                        <label for="dropoff">Drop-off Location:</label>
+                        <input
+                            type="text"
+                            id="dropoff"
+                            name="dropoff"
+                            list="places"
+                            placeholder="Choose a location">
+                    </p>
+
+                    <p>
+                        <label for="date">Date:</label>
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            required>
+                    </p>
+
+                    <p>
+                        <label for="time">Time:</label>
+                        <input
+                            type="time"
+                            id="time"
+                            name="time"
+                            required>
+                    </p>
+
+                    <p>
+                        <label for="passengers">Passengers:</label>
+                        <input
+                            type="number"
+                            id="passengers"
+                            name="passengers"
+                            min="1"
+                            max="10"
+                            value="1">
+                    </p>
+
+                    <p>
+                        <label for="vehicle">Vehicle Type:</label>
+                        <select id="vehicle" name="vehicle">
+                            <option value="taxi">Electric Taxi</option>
+                            <option value="taxi">Taxi</option>
+                            <option value="van">Van</option>
+                            <option value="shuttle">Shuttle Bus</option>
+                            <option value="motorcycle">Motorcycle Taxi</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <strong>Payment Method:</strong><br>
+
+                        <input
+                            type="radio"
+                            id="cash"
+                            name="payment"
+                            value="cash"
+                            checked>
+                        <label for="cash">Cash</label>
+
+                        <input
+                            type="radio"
+                            id="card"
+                            name="payment"
+                            value="card">
+                        <label for="card">Card</label>
+
+                        <input
+                            type="radio"
+                            id="ewallet"
+                            name="payment"
+                            value="ewallet">
+                        <label for="ewallet">E-Wallet</label>
+                    </p>
+
+                    <p>
+                        <strong>Extras:</strong><br>
+
+                        <input
+                            type="checkbox"
+                            id="luggage"
+                            name="extras"
+                            value="extra-luggage">
+                        <label for="luggage">Extra luggage</label><br>
+
+                        <input
+                            type="checkbox"
+                            id="childseat"
+                            name="extras"
+                            value="child-seat">
+                        <label for="childseat">Child seat</label><br>
+
+                        <input
+                            type="checkbox"
+                            id="wheelchair"
+                            name="extras"
+                            value="wheelchair-accessible">
+                        <label for="wheelchair">Wheelchair accessible</label>
+                    </p>
+
+                    <p>
+                        <label for="notes">Notes for the Driver:</label><br>
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            rows="5"
+                            cols="40"
+                            placeholder="Enter any special instructions for the driver"></textarea>
+                    </p>
+
+                    <p>
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            value="agree"
+                            required>
+
+                        <label for="terms">
+                            I agree to the
+                            <a href="#terms-info">Terms &amp; Conditions</a>
+                        </label>
+                    </p>
+
+                    <p>
+                        <button type="submit">Book Now</button>
+                        <button type="reset">Clear</button>
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+            <hr>
+        </section>
+
+        <!-- VEHICLES -->
+        <section id="fleet">
+            <h2 align="center">Our Vehicles</h2>
+        
+            <table align="center">
+        
+                <!-- ROW 1 -->
+                <tr>
+                    <td>
+                        <figure>
+                            <img
+                                src="c:\Users\Lindong_E\Downloads\Electric Taxi.jpg"
+                                alt="Explore Ride Electric Taxi"
+                                width="350"
+                                height="250">
+        
+                            <figcaption>
+                                <strong>Electric Taxi</strong> -
+                                A Luxurious and Futuristic City Ride.
+                            </figcaption>
+                        </figure>
+                    </td>
+        
+                    <td>
+                        <figure>
+                            <img
+                                src="c:\Users\Lindong_E\Downloads\Taxi.jpg"
+                                alt="Explore Ride Taxi"
+                                width="300"
+                                height="250">
+        
+                            <figcaption>
+                                <strong>Taxi</strong> -
+                                A Comfortable Vehicle for Quick City Trips.
+                            </figcaption>
+                        </figure>
+                    </td>
+                </tr>
+        
+        
+                <!-- ROW 2 -->
+                <tr>
+                    <td>
+                        <figure>
+                            <img
+                                src="c:\Users\Lindong_E\Downloads\Van.jpg"
+                                alt="Explore Ride Van"
+                                width="400"
+                                height="250">
+        
+                            <figcaption>
+                                <strong>Van</strong> -
+                                A Spacious Vehicle for Families and Small Groups.
+                            </figcaption>
+                        </figure>
+                    </td>
+        
+                    <td>
+                        <figure>
+                            <img
+                                src="c:\Users\Lindong_E\Downloads\Shuttle Bus.jpg"
+                                alt="Explore Ride Shuttle Bus"
+                                width="400"
+                                height="250">
+        
+                            <figcaption>
+                                <strong>Shuttle Bus</strong> -
+                                A Convenient Option for Larger Groups.
+                            </figcaption>
+                        </figure>
+                    </td>
+                </tr>
+        
+        
+                <!-- ROW 3 -->
+                <tr>
+                    <td colspan="2" align="center">
+                        <figure>
+                            <img
+                                src="c:\Users\Lindong_E\Downloads\Motorcycle Taxi.jpg"
+                                alt="Explore Ride Motorcycle Taxi"
+                                width="400"
+                                height="250">
+        
+                            <figcaption>
+                                <strong>Motorcycle Taxi</strong> -
+                                A Convenient Option for Solo Trips.
+                            </figcaption>
+                        </figure>
+                    </td>
+                </tr>
+        
+            </table>
+        
+            <hr>
+        </section>
+
+        </section>
+
+
+        <!-- MEDIA -->
+        <section id="media">
+            <h2>Media</h2>
+
+            <h3>Announcement</h3>
+
+            <audio controls>
+
+                <source
+                    src="c:\Users\Lindong_E\Downloads\Announcement - Sound Effect (4K).mp4"
+                    type="audio/mpeg">
+
+                <source
+                    src="c:\Users\Lindong_E\Downloads\Announcement - Sound Effect (4K).mp4"
+                    type="audio/ogg">
+
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Baguio Trip</h3>
+            
+            <iframe
+                width="560"
+                height="315"
+                src="c:\Users\Lindong_E\Downloads\BAGUIO CITY Tourist Spots _ 20 Places to Visit in BAGUIO.mp4"
+                title="YouTube Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            
+            <hr>
+        </section>
+
+
+        <!-- SCHEDULE -->
+        <section id="schedule">
+            <h2>Shuttle Schedule</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+
+                <caption>
+                    Daily departures from Central Terminal
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Terminal to City Hall</td>
+                        <td>8:00 AM</td>
+                        <td>8:20 AM</td>
+                        <td>₱50</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to University</td>
+                        <td>9:00 AM</td>
+                        <td>9:30 AM</td>
+                        <td>₱65</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Airport</td>
+                        <td>10:00 AM</td>
+                        <td>10:45 AM</td>
+                        <td>₱100</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Public Market</td>
+                        <td>11:00 AM</td>
+                        <td>11:20 AM</td>
+                        <td>₱60</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Park</td>
+                        <td>11:40 AM</td>
+                        <td>12:20 PM</td>
+                        <td>₱65</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Museum</td>
+                        <td>12:40 PM</td>
+                        <td>1:20 PM</td>
+                        <td>₱70</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Hotel</td>
+                        <td>1:20 PM</td>
+                        <td>2:00 PM</td>
+                        <td>₱60</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Restaurant</td>
+                        <td>2:00 PM</td>
+                        <td>2:40 PM</td>
+                        <td>₱55</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Mall</td>
+                        <td>2:40 PM</td>
+                        <td>3:20 PM</td>
+                        <td>₱60</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+            <h3>Check Your Route</h3>
+
+            <form method="get">
+
+                <label for="route">Select Route:</label>
+
+                <select id="route" name="route">
+                    <option value="city-hall">
+                        Terminal to City Hall
+                    </option>
+
+                    <option value="university">
+                        Terminal to University
+                    </option>
+
+                    <option value="airport">
+                        Terminal to Airport
+                    </option>
+
+                    <option value="market">
+                        Terminal to Public Market
+                    </option>
+                </select>
+
+                <button type="submit">Search</button>
+
+            </form>
+
+            <hr>
+        </section>
+
+
+        <!-- CONTACT AND FEEDBACK -->
+        <section id="contact">
+            <h2>Contact &amp; Feedback</h2>
+
+            <form
+                action="#"
+                method="post"
+                enctype="multipart/form-data">
+
+                <fieldset>
+
+                    <legend>Send Feedback</legend>
+
+                    <p>
+                        <label for="feedback-name">Your Name:</label>
+
+                        <input
+                            type="text"
+                            id="feedback-name"
+                            name="feedback-name"
+                            required>
+                    </p>
+
+                    <p>
+                        <label for="rating">
+                            Rate Your Ride (1-5):
+                        </label>
+
+                        <input
+                            type="range"
+                            id="rating"
+                            name="rating"
+                            min="1"
+                            max="5"
+                            value="5">
+                    </p>
+
+                    <p>
+                        <label for="topic">Topic:</label>
+
+                        <select id="topic" name="topic">
+                            <option value="compliment">Compliment</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="lost-item">Lost item</option>
+                            <option value="suggestion">Suggestion</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="message">Message:</label><br>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            cols="50"
+                            required
+                            placeholder="Write your feedback here"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="photo">
+                            Attach a photo (optional):
+                        </label>
+
+                        <input
+                            type="file"
+                            id="photo"
+                            name="photo"
+                            accept="image/*">
+                    </p>
+
+                    <p>
+                        <button type="submit">Send Feedback</button>
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+
+            <h3>Reach Us</h3>
+
+            <address>
+                Explore Ride Transportation App<br>
+                Benguet, Baguio City, Philippines<br>
+                Phone:
+                <a href="tel:+639627684759">
+                    +63 962 768 4759
+                </a>
+                <br>
+
+                Email:
+                <a href="elijahdrewlindong@gmail.com">
+                    elijahdrewlindong@gmail.com
+                </a>
+            </address>
+
+            <hr>
+        </section>
+
+
+        <!-- USEFUL LINKS -->
+        <section id="links">
+            <h2>Useful Links</h2>
+
+            <ul>
+                <li>
+                    <a
+                        href="https://www.openstreetmap.org"
+                        target="_blank"
+                        rel="noopener">
+                        OpenStreetMap
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://maps.google.com"
+                        target="_blank"
+                        rel="noopener">
+                        Google Maps
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#top">
+                        Back to top
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- TERMS -->
+        <section id="terms-info">
+            <h2>Terms &amp; Conditions</h2>
+
+            <details>
+                <summary>Read the terms</summary>
+
+                <ol>
+                    <li>
+                        Passengers must provide accurate booking information.
+                    </li>
+
+                    <li>
+                        Passengers should arrive at the pickup location on time.
+                    </li>
+
+                    <li>
+                        Passengers must follow the safety instructions of the driver.
+                    </li>
+
+                    <li>
+                        Explore Ride is not responsible for personal items left inside vehicles.
+                    </li>
+                </ol>
+
+            </details>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <hr>
+
+        <p>
+            &copy; 2026 Explore Ride Transportation App. All rights reserved.
+        </p>
+
+        <p>
+            Author: Elijah Drew D. Lindong
+        </p>
+
+        <p>
+            Published Date: Oct 7, 2026
+        </p>
+    </footer>
+
+</body>
+
+</html>
+
